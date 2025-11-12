@@ -1,7 +1,10 @@
 name: Python Package using Conda
 
-on: [push]
+#on: [push]
 
+on:
+  schedule:
+    - cron: '*/5 * * * *'
 jobs:
   build-linux:
     runs-on: ubuntu-latest
@@ -25,4 +28,4 @@ jobs:
     - name: Run app script
       run: |
         # Run your Python script from the app folder
-        python app/main.py
+        python app/app_with_comments.py

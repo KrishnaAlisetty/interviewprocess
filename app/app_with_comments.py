@@ -275,8 +275,8 @@ The generated question numbers should start from 1. and must be strictly sequent
 
 
 async def post_result_to_db(lines):
-    url = "http://127.0.0.1:8000/users/"
-    payload = {"name": "Test", "qa": [], "jd": jd_text_for_payload}  # Example URL for testing POST requests
+    #url = "http://127.0.0.1:8000/users/"
+    #payload = {"name": "Test", "qa": [], "jd": jd_text_for_payload}  # Example URL for testing POST requests
     for line in lines:
         answer = openai.completions.create(
             model="gpt-3.5-turbo-instruct",
@@ -285,11 +285,14 @@ async def post_result_to_db(lines):
             max_tokens=50,
         ).choices[0].text.strip()
 
-        payload["qa"].append({"question": line, "answer": answer})
+        print(line)
+        print(answer)
 
-    response = requests.post(url, json=payload)
-    print(response.status_code)
-    print(response.text)
+        #payload["qa"].append({"question": line, "answer": answer})
+
+    #response = requests.post(url, json=payload)
+    #print(response.status_code)
+    #print(response.text)
 
 
 def run_non_agentic_flow(resume_file_like, jd_text, num_q, difficulty):
@@ -494,3 +497,7 @@ if generate_clicked:
                 f'<div class="output-text">{skill_report_display}</div></div>',
                 unsafe_allow_html=True,
             )
+
+
+if __name__ == "__main__":
+    generate_questions("java, spring, springboot", "5", "medium")
