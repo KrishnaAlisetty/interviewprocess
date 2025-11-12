@@ -31,4 +31,4 @@ jobs:
     - name: Run app script
       run: |
         # Run your Python script from the app folder
-        python app/app_with_comments.py
+        python app/main.py
