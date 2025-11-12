@@ -275,6 +275,18 @@ The generated question numbers should start from 1. and must be strictly sequent
 
 
 async def post_result_to_db(lines):
+    project_root = os.getcwd()
+    output_folder_name = "out"
+
+    # Construct the full path to the output directory
+    output_dir = os.path.join(project_root, output_folder_name)
+
+    # Define the filename
+    file_name = "output_data.txt"
+    file_path = os.path.join(output_dir, file_name)
+
+    # Create the output directory if it doesn't exist
+    os.makedirs(output_dir, exist_ok=True)
     #url = "http://127.0.0.1:8000/users/"
     #payload = {"name": "Test", "qa": [], "jd": jd_text_for_payload}  # Example URL for testing POST requests
     for line in lines:
@@ -285,8 +297,13 @@ async def post_result_to_db(lines):
             max_tokens=50,
         ).choices[0].text.strip()
 
-        print(line)
-        print(answer)
+        try:
+            with open(file_path, "w") as f:
+                f.write(line + "\n")
+                f.write(answer + "\n")
+            print(f"File '{file_name}' successfully created in '{output_dir}'.")
+        except IOError as e:
+            print(f"Error writing to file: {e}")
 
         #payload["qa"].append({"question": line, "answer": answer})
 
