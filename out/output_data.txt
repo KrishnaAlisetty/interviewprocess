@@ -1,4 +1,2 @@
-3. How would you handle dependency injection in a Spring application? Can you provide an example of when you would use constructor injection versus setter injection?
-Dependency injection in a Spring application can be achieved in the following ways:
-
-1. Using @Autowired annotation: This is the most commonly used way of dependency injection in Spring. By using the @Autowired annotation, the Spring container will automatically inject the required
+3. Can you give an example of utilizing dependency injection in a Java application using Spring?
+Sure, let's say we have a Spring application that manages a blog. The blog has a PostService class that is responsible for handling all the logic related to posts. This class has a dependency on a PostRepository interface that defines methods for interacting
