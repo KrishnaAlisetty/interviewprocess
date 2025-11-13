@@ -1,4 +1,4 @@
-3. Can you walk me through the process of setting up a Spring application?
-Sure, the process of setting up a Spring application can be broken down into the following steps:
+3. Have you ever encountered issues with compatibility between different versions of Java and Spring? If so, how did you resolve them?
+Yes, I have encountered issues with compatibility between different versions of Java and Spring. In order to resolve these issues, I have taken the following steps:
 
-1. Choose a development environment: The first step is to choose a development environment for your Spring application, such as Eclipse, IntelliJ, or NetBeans
+1. Check the compatibility matrix: Spring provides a compatibility matrix that shows which versions of Java are
