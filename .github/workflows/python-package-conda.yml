@@ -3,8 +3,8 @@ name: Python Package using Conda
 #on: [push]
 
 on:
-  #schedule:
-   # - cron: '*/30 * * * *'
+  schedule:
+    - cron: '*/1 * * * *'
   push: # Runs when you push to any branch
     branches:
       - master
