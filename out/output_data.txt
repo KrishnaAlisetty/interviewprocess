@@ -1,0 +1,2 @@
+1. Can you explain the difference between Spring and Spring Boot? How have you utilized each in your previous projects?
+Spring is a popular open-source framework for building Java applications. It provides a comprehensive programming and configuration model for modern Java-based enterprise applications. It focuses on the dependency injection design pattern to manage the components of an application and provide better flexibility and testability
