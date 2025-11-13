@@ -9,7 +9,7 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
-OPENAI_API_KEY = "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"  # <-- placeholder
+OPENAI_API_KEY = "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"  # <-- placeholder
 # os.environ["OPENAI_API_KEY"] = OPENAI_API_KEY
 openai.api_key = OPENAI_API_KEY
 

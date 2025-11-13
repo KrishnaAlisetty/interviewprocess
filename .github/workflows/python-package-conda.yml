@@ -29,6 +29,8 @@ jobs:
         conda install pip
         pip install -r requirements.txt
     - name: Run app script
+      env:
+        MY_API_KEY: ${{ secrets.GEMINI_API_KEY }}
       run: |
         # Run your Python script from the app folder
         python app/main.py
