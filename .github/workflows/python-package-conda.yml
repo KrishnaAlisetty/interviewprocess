@@ -3,11 +3,11 @@ name: Python Package using Conda
 #on: [push]
 
 on:
-  schedule:
-    - cron: '*/2 * * * *'
-  #push: # Runs when you push to any branch
-    #branches:
-     # - master
+  #schedule:
+    #- cron: '*/2 * * * *'
+  push: # Runs when you push to any branch
+    branches:
+      - master
 jobs:
   build-linux:
     runs-on: ubuntu-latest
