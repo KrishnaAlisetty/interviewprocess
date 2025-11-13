@@ -1,2 +1,4 @@
-1. Can you explain the difference between Spring and Spring Boot? How have you utilized each in your previous projects?
-Spring is a popular open-source framework for building Java applications. It provides a comprehensive programming and configuration model for modern Java-based enterprise applications. It focuses on the dependency injection design pattern to manage the components of an application and provide better flexibility and testability
+3. How would you handle dependency injection in a Spring application? Can you provide an example of when you would use constructor injection versus setter injection?
+Dependency injection in a Spring application can be achieved in the following ways:
+
+1. Using @Autowired annotation: This is the most commonly used way of dependency injection in Spring. By using the @Autowired annotation, the Spring container will automatically inject the required
