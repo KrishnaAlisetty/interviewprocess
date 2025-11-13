@@ -1,2 +1,4 @@
-3. How have you utilized Spring Boot in previous projects? Can you provide an example of a specific problem it helped to solve?
-I have used Spring Boot in several projects, including a microservice-based e-commerce platform and a REST API for a mobile application. One specific problem that Spring Boot helped to solve was the configuration and deployment of the microservices in the e-commerce platform
+3. Have you encountered any challenges while using Spring and how did you solve them?
+Yes, I have encountered some challenges while using Spring. Some of the common challenges include configuration errors, dependency management issues, and understanding the different components and their functionalities.
+
+To solve these challenges, I have used various resources such as online forums, official
