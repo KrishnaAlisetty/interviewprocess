@@ -34,3 +34,13 @@ jobs:
       run: |
         # Run your Python script from the app folder
         python app/main.py
+
+    - name: Commit and push changes
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: |
+        git config user.name "KrishnaAlisetty"
+        git config user.email "krishnaalisetty@gmail.com"
+        git add .
+        git commit -m "Auto commit"
+        git push origin master
