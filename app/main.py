@@ -18,7 +18,7 @@ def generate_questions(common_skills, num_questions, difficulty_level):
     """
     prompt = f"""Based on the following common technical skills, generate {num_questions} interview questions with a difficulty level of {difficulty_level}.
                  Common Skills: {common_skills}.
-                 The generated question numbers should start from 1. and must be strictly sequential (1., 2., 3., ...). Do not skip numbers. Do not start from 0."""
+                 The generated question numbers should start from 1. and must be strictly sequential (1., 2., 3., ...). Do not skip numbers. Do not start from 0. """
 
     logger.info("[Non-Agentic] Generating interview questions ...")
     response = openai.completions.create(
@@ -63,4 +63,4 @@ def post_result_to_db(lines):
 
 
 if __name__ == "__main__":
-    generate_questions("java, spring, springboot", "1", "medium")
+    generate_questions("java, spring, springboot", "3", "medium")

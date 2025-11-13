@@ -4,10 +4,10 @@ name: Python Package using Conda
 
 on:
   schedule:
-    - cron: '*/1 * * * *'
-  push: # Runs when you push to any branch
-    branches:
-      - master
+    - cron: '*/2 * * * *'
+  #push: # Runs when you push to any branch
+    #branches:
+     # - master
 jobs:
   build-linux:
     runs-on: ubuntu-latest
