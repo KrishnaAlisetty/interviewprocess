@@ -7,7 +7,6 @@ import logging
 import requests
 import asyncio
 
-openai.api_key = "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"
 jd_text_for_payload = ""
 # -------------------------------
 # LOGGING CONFIG
@@ -41,9 +40,6 @@ st.set_page_config(
 # -------------------------------
 # NOTE: This is shown here for demonstration. In real projects DO NOT hardcode keys.
 # TIP: Use environment variables or Streamlit secrets (st.secrets["OPENAI_API_KEY"]).
-OPENAI_API_KEY = "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"  # <-- placeholder
-# os.environ["OPENAI_API_KEY"] = OPENAI_API_KEY
-openai.api_key = OPENAI_API_KEY
 
 # -------------------------------
 # STREAMLIT SESSION STATE

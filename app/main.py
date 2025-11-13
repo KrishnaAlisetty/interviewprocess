@@ -9,9 +9,7 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
-OPENAI_API_KEY = "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"  # <-- placeholder
-# os.environ["OPENAI_API_KEY"] = OPENAI_API_KEY
-openai.api_key = OPENAI_API_KEY
+openai.api_key = os.getenv("MY_API_KEY")
 
 def generate_questions(common_skills, num_questions, difficulty_level):
     """
