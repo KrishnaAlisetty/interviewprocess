@@ -1,2 +1,4 @@
-3. Can you give an example of utilizing dependency injection in a Java application using Spring?
-Sure, let's say we have a Spring application that manages a blog. The blog has a PostService class that is responsible for handling all the logic related to posts. This class has a dependency on a PostRepository interface that defines methods for interacting
+3. How have you implemented dependency injection in Spring applications? Can you provide an example?
+Dependency injection is a core concept in Spring framework, and it is implemented through the use of Inversion of Control (IoC) container. The IoC container manages the creation and injection of dependencies, allowing for loose coupling and easier testing.
+
+There
