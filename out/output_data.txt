@@ -1,4 +1,2 @@
-3. Have you encountered any challenges while using Spring and how did you solve them?
-Yes, I have encountered some challenges while using Spring. Some of the common challenges include configuration errors, dependency management issues, and understanding the different components and their functionalities.
-
-To solve these challenges, I have used various resources such as online forums, official
+3. Can you explain the concept of dependency injection in Spring?
+Dependency injection is a design pattern used in software development that allows for loose coupling between different components of a system. In the context of Spring, dependency injection is a core principle that enables the framework to manage the creation and use of objects within an application
