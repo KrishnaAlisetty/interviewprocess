@@ -1,4 +1,2 @@
-3. How have you implemented dependency injection in Spring applications? Can you provide an example?
-Dependency injection is a core concept in Spring framework, and it is implemented through the use of Inversion of Control (IoC) container. The IoC container manages the creation and injection of dependencies, allowing for loose coupling and easier testing.
-
-There
+3. How have you utilized Spring Boot in previous projects? Can you provide an example of a specific problem it helped to solve?
+I have used Spring Boot in several projects, including a microservice-based e-commerce platform and a REST API for a mobile application. One specific problem that Spring Boot helped to solve was the configuration and deployment of the microservices in the e-commerce platform
