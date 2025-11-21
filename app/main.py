@@ -16,9 +16,9 @@ def generate_questions(common_skills, num_questions, difficulty_level):
     Ask the model to write N interview questions, tuned by difficulty.
     The prompt forces numbering to start at 1 and be sequential.
     """
-    prompt = f"""Based on the following common technical skills, generate {num_questions} interview questions with a difficulty level of {difficulty_level}.
+    prompt = f"""Based on the following common technical skills, generate {num_questions} interview questions along with answer with a difficulty level of {difficulty_level}.
                  Common Skills: {common_skills}.
-                 The generated question numbers should start from 1. and must be strictly sequential (1., 2., 3., ...). Do not skip numbers. Do not start from 0. """
+                 The generated question and answers should be in the form of json with common skill as a header and question with question key and answer with answer key. consider this as a sample json template ```skillname:{{"question":generated question, "answer":generated answer}}``` """
 
     logger.info("[Non-Agentic] Generating interview questions ...")
     response = openai.completions.create(
@@ -46,21 +46,13 @@ def post_result_to_db(lines):
     #url = "http://127.0.0.1:8000/users/"
     #payload = {"name": "Test", "qa": [], "jd": jd_text_for_payload}  # Example URL for testing POST requests
     for line in lines:
-        answer = openai.completions.create(
-            model="gpt-3.5-turbo-instruct",
-            prompt=line,
-            temperature=0.7,
-            max_tokens=50,
-        ).choices[0].text.strip()
-
         try:
             with open(file_path, "w") as f:
                 f.write(line + "\n")
-                f.write(answer + "\n")
             print(f"File '{file_name}' successfully created in '{output_dir}'.")
         except IOError as e:
             print(f"Error writing to file: {e}")
 
 
 if __name__ == "__main__":
-    generate_questions("java, spring, springboot", "3", "medium")
+    generate_questions("java", "3", "medium")
